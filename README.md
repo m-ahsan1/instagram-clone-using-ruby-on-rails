@@ -1,10 +1,10 @@
-                                                            Description : 
+                               Description : 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 An Instagram Clone with basic social media app features, built on ruby on rails.
 
 
-                                                              Features 
+                                Features 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 1.     Users
 A user can sign-up and sign-in.
@@ -40,7 +40,7 @@ Private posts only be show when a follow request is accepted by the user
 5.     Search
 Users can search each other.
 
-                                                                    Built On
+                                 Built On
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
   Visual Studio Code
