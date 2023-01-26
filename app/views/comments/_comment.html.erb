@@ -1,0 +1,8 @@
+ <article>
+  <p><%= comment.content %> </p>
+  <small> by <%= comment.user.email %> </small>
+
+  <p><%= link_to "Delete",[comment.post, comment], method: :delete, data: {confirm: 'Are you sure?' } %></p>
+
+ </article>
+ <hr/ >

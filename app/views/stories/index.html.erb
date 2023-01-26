@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<% @stories.each do |story| %>
+  <div class="card" style="width: 18rem;">
+    <% if story.image.attached? %>
+      <image src="<%=(url_for(story.image))%>">
+    <% end %>
+
+    <div class="card-body">
+      <p class="card-text"> <%=story.user.email%></p>
+      <% if story.user == current_user %>
+          <%= link_to 'Edit', edit_story_path(story) %></td>
+          <%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </div>
+  </div>
+
+<% end %>
+
+
+
+
+
+
+<br>
+
+<%= link_to 'New Story', new_story_path %>

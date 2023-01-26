@@ -1,0 +1,39 @@
+<%= form_with(model: story, local: true) do |form| %>
+  <% if story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+      <ul>
+      <% story.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :story_id %>
+    <%= form.number_field :story_id %>
+  </div>
+
+  <div class="field">
+    <% if story.image.attached? %>
+      <%= image_tag story.image, style: "width: 100px; display: block" %>
+    <% end %>
+
+  <div class="field">
+
+    <%= form.number_field :user_id,
+        id: :story_user_id,
+        value:current_user.id
+    %>
+  </div>
+
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

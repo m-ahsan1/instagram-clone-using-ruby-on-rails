@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @story.story_id %>
+</p>
+
+
+<p>
+  <strong>Story:</strong>
+  <%= @story.story_id %>
+  <% if @story.image.attached? %>
+<image src="<%=(url_for(@story.image))%>">
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>
